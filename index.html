@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Pomodoro</title>
+</head>
+<body>
+    <div class="container">    
+        <header>
+            <div class="title">
+                <h1>Pomodoro Timer</h1>
+            </div>
+        </header>
+        <div class="box-border-wrap">
+            <div class="box">
+                <div class="sessionTitle">
+                    <h1 id="session-title">Session</h1>
+                </div>
+                <div class="pomodoro-timer">
+                    <h2 id="timer">01:00</h2>
+                </div>
+                <div class="input">
+                    <label for="sessionInput">session:
+                        <input type="number" id="sessionInput" value="1" max="60" min="1">
+                    </label>
+                    <label for="breakInput">break:
+                        <input type="number" id="breakInput" value="5" max="10" min="1">
+                    </label><br>
+                    <button id="startTimer">start session</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>hey</p>
+    <!-- <audio id="beep" preload="auto" src="https://goo.gl/65cBl1" autoplay/> -->
+    <script src="assets/js/Timer.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
