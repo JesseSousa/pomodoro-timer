@@ -7,7 +7,7 @@ let counter;
 let timerId;
 let session = 'session';
 
-let beep = new Audio('https://goo.gl/65cBl1');
+let beep = new Audio('sounds/BeepSound.wav');
 beep.volume = 0.2;
 
 if (session === 'session') {
