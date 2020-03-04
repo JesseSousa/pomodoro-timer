@@ -15,7 +15,6 @@ function convertSeconds(s) {
 function count() {
     counter--;
     timer.textContent = convertSeconds(counter);
-    console.log(counter);
     if (counter < 1) {
         session = (session === 'session') ? session = 'break' : session = 'session';
         beep.play();

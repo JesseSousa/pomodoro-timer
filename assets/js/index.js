@@ -10,10 +10,6 @@ let session = 'session';
 let beep = new Audio('https://goo.gl/65cBl1');
 beep.volume = 0.2;
 
-console.log(beep.volume);
-
-
-
 if (session === 'session') {
     counter = sessionInput.value * 60;
 } else {
