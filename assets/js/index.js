@@ -18,8 +18,6 @@ if (session === 'session') {
 
 startButton.addEventListener('click', startButtonEvent);
 
-
-
 function startButtonEvent() {
     changeSession();
     switchPause();
@@ -29,6 +27,10 @@ function startButtonEvent() {
 
 function sessionInputFunction() {
     if (session === 'session') {
+        if (sessionInput.value > 60) {
+            sessionInput.value = 60;
+            sessionInput.setAttribute('disabled', '');
+        }
         counter = sessionInput.value * 60;
         timer.textContent = convertSeconds(counter);
     }
@@ -36,6 +38,10 @@ function sessionInputFunction() {
 
 function breakInputFunction() {
     if (!(session === 'session')) {
+        if (breakInput.value > 10) {
+            breakInput.value = 10;
+            breakInput.setAttribute('disabled', '');
+        }
         counter = breakInput.value * 60;
         timer.textContent = convertSeconds(counter);
     }
@@ -46,9 +52,15 @@ breakInput.addEventListener('input', breakInputFunction);
 
 function changeSession() {
     if (session === 'session') {
+        if (sessionInput.value > 60) {
+            sessionInput.value = 60;
+        }
         sessionTitle.textContent = 'Session';
         startButton.textContent = 'start session';
     } else {
+        if (breakInput.value > 15) {
+            breakInput.value = 15;
+        }
         sessionTitle.textContent = 'Break time';
         startButton.textContent = 'start break';
     }
