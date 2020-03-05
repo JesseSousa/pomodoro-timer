@@ -8,7 +8,6 @@ $blue2-color: #1BE7FF;
 $white-color: #F1FAEE;
 $black-color: #353535;
 $green-color: #8AEA92;
-$grey-color: #CCDBDC;
 
 body {
     overflow: hidden;
@@ -35,7 +34,7 @@ body {
 
 .container {
     text-align: center;
-    background: $grey-color;
+    background: $white-color;
     padding: 20px;
     width: 100%;
     height: 120vh;
@@ -73,7 +72,7 @@ body {
     .box {
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(to bottom right, $white-color, $blue-color);
+        background: $white-color;
         border-radius: 30px;
         text-align: center;
         color: $black-color;

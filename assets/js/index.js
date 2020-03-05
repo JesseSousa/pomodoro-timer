@@ -27,19 +27,22 @@ function startButtonEvent() {
     startButton.removeEventListener('click', startButtonEvent, false);
 }
 
-sessionInput.addEventListener('click', function() {
+function sessionInputFunction() {
     if (session === 'session') {
         counter = sessionInput.value * 60;
         timer.textContent = convertSeconds(counter);
     }
-});
+}
 
-breakInput.addEventListener('click', function() {
+function breakInputFunction() {
     if (!(session === 'session')) {
         counter = breakInput.value * 60;
         timer.textContent = convertSeconds(counter);
     }
-});
+}
+
+sessionInput.addEventListener('input', sessionInputFunction);
+breakInput.addEventListener('input', breakInputFunction);
 
 function changeSession() {
     if (session === 'session') {

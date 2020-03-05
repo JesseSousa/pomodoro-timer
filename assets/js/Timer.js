@@ -25,6 +25,9 @@ function count() {
         } else {
             counter =  breakInput.value * 60;
         }
+
+        sessionInput.removeAttribute('disabled');
+        breakInput.removeAttribute('disabled');
         
         timer.textContent = convertSeconds(counter);
         stopCounter();
@@ -32,6 +35,8 @@ function count() {
 }
 
 function startCounter() {
+    sessionInput.setAttribute('disabled', '');
+    breakInput.setAttribute('disabled', '');
     timerId = setInterval(count, 1000);
 }
 
